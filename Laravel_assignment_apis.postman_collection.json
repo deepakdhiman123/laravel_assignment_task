@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "6a990178-f36d-4ea2-8f60-efbd24a1adc3",
+		"name": "Laravel_assignment_apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19847430"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"packages": {},
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"test@example.com\",\n    \"password\": \"Password@123\",\n    \"password_confirmation\": \"Password@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test\",\n    \"email\": \"test@example.com\",\n    \"password\": \"Password@123\",\n    \"password_confirmation\": \"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 18:34:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Registered successfully.\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTljN2IxNS00ZDliLTcwMjYtOWE5Ni1kOWU3MzU3MzY0MjMiLCJqdGkiOiI0MGFkOTIwMzNhMDg0OWU2MjU3ZGMzNjIzYWJmOWIwMWEyZTQ0MGY3Y2E0YzFkZjQ1YzBkOWIxMGFkYjVmNDAyMTcxYzBiNmE2YjNiOWMxNCIsImlhdCI6MTc3MTYxMjQ3MS4xMDA3MDIsIm5iZiI6MTc3MTYxMjQ3MS4xMDA3MDQsImV4cCI6MTgwMzE0ODQ3MS4wOTY3LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.gMJmz0D87ZULqFhazuy0DH0DH40xhHcOejfOhe-K_abfrzA9NFEXBCGrBmUND9x4ZlR_ZntdMS4jEx1gLgLBDZbQcCJAcNyMHuXsb2JWYC1_OniJCn367c6ArMEwj2u8gs-wKHz3mv1nQzk2epPRUB8sr4qE4KTSJp8wqICZoP3BYwaBoSlz3uipJVQZZ81Dd9ns2-iah5-6JyX_xefXW5ycmlb-g-OIot3vrM-_r9dSZA8V1I0WHB_v-HInEXi9Vq3oE8Yv-OW1mc8JZpNJxmNwlE4fLtgckrXvhDJAj5hPUEGI2tjRW_DM9623M6gbMkVlXWNIAj5ofzsL48IAtfML9vTOgfu_amOViFeG2izObfmx96CPgYGASPDedODNJ1PqwVqkQoJAaohugP0XXMlQXFaYNeXQwbhfpAIM1lTUbjXNwNmPXP81YniOcfMJhgds2JIG-gne4X1OL2p79ipVZbXNtlrR27MCu65M-e3EZL5WGry26iP3bZH5fTsv6RIP-KSkp0SwcCVYUrOXCZzeywwl-nChFsp0Yg3NMZ8FJCEFlAIyycHEH9sV74UTdPbJ3MN-wuQt3-Wpbkl3Tw0I70RRLbW_aNdTUDkWzACRqpJIYV_dp7F5pdfglEU3pd5wQP6HRTPPnxJpUfSP1qKk0RCLow4TUGVgjBd8T6o\",\n        \"user\": {\n            \"name\": \"Test\",\n            \"email\": \"test@example.com\",\n            \"updated_at\": \"2026-02-20T18:34:31.000000Z\",\n            \"created_at\": \"2026-02-20T18:34:31.000000Z\",\n            \"id\": 4\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    const res = pm.response.json();",
+									"    pm.environment.set(\"access_token\", res.data.token);",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@example.com\",\n    \"password\":\"Password@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"test@example.com\",\n    \"password\":\"Password@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 18:43:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Login successful.\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTljN2IxNS00ZDliLTcwMjYtOWE5Ni1kOWU3MzU3MzY0MjMiLCJqdGkiOiJiNTY5ZDYyMjVhOWEyOTQ3YTNlMzk3OGEyYjliNjhhNGY5ZTZkYzcxMDIwYzdjNmNiYjhiN2MzOGM4YTk3MTQ4MmZiNGRkYjkxM2VhYzg3YiIsImlhdCI6MTc3MTYxMjk5MS4zOTM2NDUsIm5iZiI6MTc3MTYxMjk5MS4zOTM2NDcsImV4cCI6MTgwMzE0ODk5MS4zODg4Niwic3ViIjoiNCIsInNjb3BlcyI6W119.pc4RgJn9XbvJr3EPgXPsbpL9z1cugS3m3J-E8hD1v_WiEpLtn3GSszG_S_aEGn4UdBqTYd16tHtioDpiY0e14_Oc4cycf-bblLpA-ApQD14ALCkJdlP2nHKrPgFlihCfiSr35JpAdGuvTeoiiVGRzgOZirCS367KPieQNtjh7GxXVwNDZpdRv7wtY1sBtagFu_LHH7ZUbpwj7HSPywv_Ld3CofWTopChOxo7kAlLKUnyfryNp3FGjse5NKhmll3KVqvyBONJJUoRiuiP1p7OLQSjTt1jR-D7IPwE29LZGOsXsNYa8nA1pbifgqNRXkc71pm7euK3fz9goTeQJ5sJPv-PpJTIWtTx2h4MdEpmqJr-ujzk9uXgQm-usf9Ox5uVF_1i5E81AIB29pcQJFlACwUbw5qaa3wyBlfCcfLFdW-uksO7nNUWYQYZoiITAXNFU8Df-eYBgiqnf3Zt5VqeQta7HmdX82cLuZtpgYnmtZCbT-cSug-zBNctUPqe5_B5tT0imhxFLW36LVxTUvILmw8AVUftu1fvrV_gq02eYa-L9eLBKlq0fsKQGhiUDLWWOAAzegQUhMFO3iylOfpGsqnM4-PJrW4q_L8iPPRNp3Xgg_JKm3CQYLH9Cs4jSsy0-v4WJX2yYAwARqv0gG4rbdFwEHlWF7g3B1T1daxJEZ8\",\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"Test\",\n            \"email\": \"test@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-20T18:34:31.000000Z\",\n            \"updated_at\": \"2026-02-20T18:34:31.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code === 200) {",
+									"    // Clear the token after logout",
+									"    pm.environment.set(\"access_token\", \"\");",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 18:49:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logged out successfully.\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Add Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"title 3\",\n    \"description\": \"desc\",\n    \"status\": \"pending\",\n    \"due_date\": \"2026-03-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tasks",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"title\",\n    \"description\": \"desc\",\n    \"status\": \"pending\",\n    \"due_date\": \"2026-03-02\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tasks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 18:53:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Task created successfully\",\n    \"data\": {\n        \"user_id\": 4,\n        \"title\": \"title\",\n        \"description\": \"desc\",\n        \"status\": \"pending\",\n        \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n        \"updated_at\": \"2026-02-20T18:53:44.000000Z\",\n        \"created_at\": \"2026-02-20T18:53:44.000000Z\",\n        \"id\": 12\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"new title 2\",\n    \"description\": \"new desc\",\n    \"status\": \"completed\",\n    \"due_date\": \"2026-03-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tasks/12",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"new title\",\n    \"description\": \"new desc\",\n    \"status\": \"completed\",\n    \"due_date\": \"2026-03-02\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tasks/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 18:58:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 12,\n        \"user_id\": 4,\n        \"title\": \"new title\",\n        \"description\": \"new desc\",\n        \"status\": \"completed\",\n        \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n        \"deleted_at\": null,\n        \"created_at\": \"2026-02-20T18:53:44.000000Z\",\n        \"updated_at\": \"2026-02-20T18:58:05.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get LoggedIn User Task (or filtered task)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/tasks?status=pending&per_page=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "pending"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								}
+							]
+						},
+						"description": "filter the task as per status and paginate as per set per_page in params"
+					},
+					"response": [
+						{
+							"name": "Get LoggedIn User Task (or filtered task)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/tasks?status=pending&per_page=10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "pending"
+										},
+										{
+											"key": "per_page",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 19:13:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Tasks retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": 16,\n            \"user_id\": 4,\n            \"title\": \"title 3\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T19:09:38.000000Z\",\n            \"updated_at\": \"2026-02-20T19:09:38.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"user_id\": 4,\n            \"title\": \"title 2\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T19:09:32.000000Z\",\n            \"updated_at\": \"2026-02-20T19:09:32.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"user_id\": 4,\n            \"title\": \"title\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T19:09:18.000000Z\",\n            \"updated_at\": \"2026-02-20T19:09:18.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"user_id\": 4,\n            \"title\": \"title\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T19:09:16.000000Z\",\n            \"updated_at\": \"2026-02-20T19:09:16.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"user_id\": 4,\n            \"title\": \"title 1\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T18:53:37.000000Z\",\n            \"updated_at\": \"2026-02-20T18:53:37.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"user_id\": 4,\n            \"title\": \"title\",\n            \"description\": \"desc\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n            \"deleted_at\": null,\n            \"created_at\": \"2026-02-20T18:53:22.000000Z\",\n            \"updated_at\": \"2026-02-20T18:53:22.000000Z\"\n        }\n    ],\n    \"meta\": {\n        \"current_page\": 1,\n        \"last_page\": 1,\n        \"per_page\": 10,\n        \"total\": 6,\n        \"from\": 1,\n        \"to\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get LoggedIn User Single Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tasks/12",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"12"
+							]
+						},
+						"description": "Pass the Task Id in url to get the task details"
+					},
+					"response": [
+						{
+							"name": "Get LoggedIn User Single Task",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tasks/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 19:17:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Task retrieved successfully\",\n    \"data\": {\n        \"id\": 12,\n        \"user_id\": 4,\n        \"title\": \"new title 2\",\n        \"description\": \"new desc\",\n        \"status\": \"completed\",\n        \"due_date\": \"2026-03-02T00:00:00.000000Z\",\n        \"deleted_at\": null,\n        \"created_at\": \"2026-02-20T18:53:44.000000Z\",\n        \"updated_at\": \"2026-02-20T19:09:53.000000Z\",\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"Test\",\n            \"email\": \"test@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-20T18:34:31.000000Z\",\n            \"updated_at\": \"2026-02-20T18:34:31.000000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Soft Delete LoggedIn User Task ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", res.data.token);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/tasks/12",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tasks",
+								"12"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Soft Delete LoggedIn User Task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tasks/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tasks",
+										"12"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Feb 2026 19:20:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Task deleted successfully\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

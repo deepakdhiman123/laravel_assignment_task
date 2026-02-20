@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Api\BaseController;
 use App\Http\Requests\Task\StoreTaskRequest;
+use App\Http\Requests\Task\TaskFilterRequest;
 use App\Http\Requests\Task\UpdateTaskRequest;
 use App\Interfaces\TaskRepositoryInterface;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class TaskController extends BaseController
 {
@@ -32,9 +32,9 @@ class TaskController extends BaseController
     /**
      * View all tasks
      */
-     public function index(Request $request): JsonResponse
+     public function index(TaskFilterRequest $request): JsonResponse
     {
-        $tasks = $this->taskRepository->all($request->only('status', 'per_page'));
+        $tasks = $this->taskRepository->all($request->only('status', 'due_date','per_page'));
 
         return response()->json([
             'success' => true,

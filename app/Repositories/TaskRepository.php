@@ -15,6 +15,7 @@ class TaskRepository implements TaskRepositoryInterface
     {
         return Task::where('user_id', auth()->guard('api')->id())
             ->when(!empty($filters['status']), fn($q) => $q->status($filters['status']))
+            ->when(!empty($filters['due_date']), fn($q) => $q->whereDate('due_date', $filters['due_date']))
             ->orderBy('created_at', 'desc')
             ->paginate($filters['per_page'] ?? 10);
     }
